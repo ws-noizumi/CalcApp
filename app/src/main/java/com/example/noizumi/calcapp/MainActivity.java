@@ -4,12 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.util.Log;
-
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -94,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String result;
                 if(e2.doubleValue() != 0.0) {
-                    result = e1.divide(e2).toString();
+                    result = e1.divide(e2,3, RoundingMode.HALF_UP).toString();
                 }else {
                     result ="0で除算はできません。";
                 }
