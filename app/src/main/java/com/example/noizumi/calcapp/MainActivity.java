@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 BigDecimal e1 = new BigDecimal(editText1.getText().toString());
                 BigDecimal e2 = new BigDecimal(editText2.getText().toString());
 
-                String result = e1.add(e2).toString();
+                String result = e1.add(e2).toPlainString();
                 intent.putExtra("FORMULA", e1.toString()+"＋"+e2.toString()+"＝");
                 intent.putExtra("RESULT", result);
                 startActivity(intent);
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 BigDecimal e1 = new BigDecimal(editText1.getText().toString());
                 BigDecimal e2 = new BigDecimal(editText2.getText().toString());
 
-                String result = e1.subtract(e2).toString();
+                String result = e1.subtract(e2).toPlainString();
                 intent.putExtra("FORMULA", e1.toString()+"－"+e2.toString()+"＝");
                 intent.putExtra("RESULT", result);
                 startActivity(intent);
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 BigDecimal e1 = new BigDecimal(editText1.getText().toString());
                 BigDecimal e2 = new BigDecimal(editText2.getText().toString());
 
-                String result = e1.multiply(e2).toString();
+                String result = e1.multiply(e2).toPlainString();
                 intent.putExtra("FORMULA", e1.toString()+"×"+e2.toString()+"＝");
                 intent.putExtra("RESULT", result);
                 startActivity(intent);
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String result;
                 if(e2.doubleValue() != 0.0) {
-                    result = e1.divide(e2,3, RoundingMode.HALF_UP).toString();
+                    result = e1.divide(e2,3, RoundingMode.HALF_UP).toPlainString();
                     intent.putExtra("FORMULA", e1.toString()+"÷"+e2.toString()+"＝");
                     intent.putExtra("RESULT", result);
                     startActivity(intent);
